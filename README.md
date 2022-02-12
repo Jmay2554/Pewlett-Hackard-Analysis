@@ -59,4 +59,8 @@ From the above we can see that 569 of our mentors are staff engineers, 501 are e
 
 ### Additional Query 2 
 
-The second query that I would suggest using is the number of retiring employees per department. This would tell me which areas in the organization would be losing the most employees so that the company is aware and may allow that area to have less business. For example, if marketing has less employees, maybe instead of 4 campaigns per month, they run 2.
+The second query that I would suggest using is the number of retiring employees per department. This would tell me which areas in the organization would be losing the most employees so that the company is aware and may allow that area to have less business. For example, if marketing has less employees, maybe instead of 4 campaigns per month, they run 2.The query would look like the following:
+
+**select ut.emp_no, de.dept_no from unique_titles as ut LEFT JOIN dept_emp as de on ut.emp_no = de.emp_no**
+
+ This would produce the retiring employees compared to the departments they are in. Then we can look at the analytics behind which departments would be hit the worst.
